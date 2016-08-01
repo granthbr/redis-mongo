@@ -1,18 +1,22 @@
 version: '2'
 
 services:
-  mongo:
+  documentStore:
     image: mongo:3.2
     volumes:
       - mongo-data:/data/db
-    expose:
-      - "27017"
-  kv:
+    ports:
+      - "27017:27017"
+    container_name: documentStore
+  cacheStore:
     image: redis:alpine
+    container_name: cacheStore
     volumes:
       - redis-data:/data
-    expose:
-      - "6379"
+    ports:
+      - "6379:6379"
 volumes:
   mongo-data:
+    external: true
   redis-data:
+    external: true
