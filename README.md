@@ -1,5 +1,16 @@
 #### MongoDB and Redis  compose 
+
+##### PreReqs
+Create data volumes first:
+docker volume create --name=redis-data
+docker volume create --name=mongo-data
+
+Once done the data is always available until those two volumes are removed. 
+
+
 ##### Setting up Admin user and db: MongoDB
+
+
 
 Use MongoDB for document datastore. 
 First setup admin user and db:
