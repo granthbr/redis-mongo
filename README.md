@@ -1,10 +1,12 @@
 #### MongoDB and Redis  compose
 
 ##### PreReqs
-Create data volumes first:```
+Create data volumes first:
+```
 docker volume create --name=redis-data
 docker volume create --name=mongo-data
 ```
+
 Once done the data is always available until those two volumes are removed.
 
 
