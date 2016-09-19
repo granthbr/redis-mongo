@@ -17,6 +17,4 @@ services:
       - "6379:6379"
 volumes:
   mongo-data:
-    external: true
   redis-data:
-    external: true

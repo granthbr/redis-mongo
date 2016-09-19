@@ -18,7 +18,7 @@ First setup admin user and db:
 ```
 docker exec -it document_store mongo admin
 connecting to: admin
-> db.createUser({ user: 'jsmith', pwd: 'some-initial-password', roles: [ { role: "userAdminAnyDatabase", db: "admin" } ] });
+> db.createUser({ user: 'admin', pwd: 'db', roles: [ { role: "userAdminAnyDatabase", db: "admin" } ] });
 Successfully added user: {
     "user" : "admin",
     "roles" : [
