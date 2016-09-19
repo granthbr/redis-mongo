@@ -8,13 +8,13 @@ services:
     ports:
       - "27017:27017"
     container_name: documentStore
-  cacheStore:
-    image: redis:alpine
-    container_name: cacheStore
-    volumes:
-      - redis-data:/data
-    ports:
-      - "6379:6379"
+#  cacheStore:
+#    image: redis:alpine
+#    container_name: cacheStore
+#    volumes:
+#      - redis-data:/data
+#    ports:
+#      - "6379:6379"
 volumes:
   mongo-data:
-  redis-data:
+#  redis-data:
